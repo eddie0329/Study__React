@@ -1,6 +1,6 @@
 
 //creating the react file
-npx create-react-app "name"
+//->npx create-react-app "name"
 
 //start the npm
-npm start
+//->npm start
