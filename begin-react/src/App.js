@@ -1,6 +1,7 @@
 import React from "react";
 import Hello from "./Hello";
 import Wrapper from "./Wrapper";
+import Counter from "./Counter";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Hello name="react" color="red" isSpecial={true} />
       <Hello name="react" color="pink" isSpecial />
       <Hello color="blue" isSpecial={false} />
+      <Counter />
     </Wrapper>
   );
 }
