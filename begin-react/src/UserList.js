@@ -1,37 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function User({ user }) {
+function User({ user, onRemove, onToggle }) {
+  const { username, email, id, active } = user;
+
+  useEffect(() => {
+    console.log("유저 값이 설정됨");
+    console.log(user);
+
+    return () => {
+      console.log("유저 값이 바뀌기 전");
+      console.log(user);
+    };
+  }, [user]);
+
   return (
     <div>
-      <b>
-        {user.username} <span>{user.email}</span>
+      <b
+        onClick={() => onToggle(id)}
+        style={{
+          color: active ? "green" : "black",
+          cursor: "pointer",
+        }}
+      >
+        {username}
       </b>
+      <span>{email}</span>
+      <button onClick={() => onRemove(id)}>X</button>
     </div>
   );
 }
 
-function UserList() {
-  const users = [
-    {
-      id: 1,
-      username: "eddie",
-      email: "eddie@gmail.com",
-    },
-    {
-      id: 2,
-      username: "sam",
-      email: "sam@gmail.com",
-    },
-    {
-      id: 3,
-      username: "tom",
-      email: "tom@gmail.com",
-    },
-  ];
+function UserList({ users, onRemove, onToggle }) {
   return (
     <div>
       {users.map((user) => (
-        <User user={user} key={user.id} />
+        <User
+          user={user}
+          key={user.id}
+          onRemove={onRemove}
+          onToggle={onToggle}
+        />
       ))}
     </div>
   );
