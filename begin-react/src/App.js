@@ -1,4 +1,4 @@
-import React, { useRef, useState, useMemo } from "react";
+import React, { useRef, useState, useMemo, useCallback } from "react";
 import Hello from "./Hello";
 import Wrapper from "./Wrapper";
 import Counter from "./Counter";
@@ -17,13 +17,16 @@ function App() {
     email: "",
   });
   const { username, email } = inputs;
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setInputs({
-      ...inputs,
-      [name]: value,
-    });
-  };
+  const onChange = useCallback(
+    (e) => {
+      const { name, value } = e.target;
+      setInputs({
+        ...inputs,
+        [name]: value,
+      });
+    },
+    [inputs]
+  );
 
   const [users, setUsers] = useState([
     {
@@ -48,7 +51,7 @@ function App() {
 
   const nextId = useRef(4); // component가 re rendering 될때에도 4로 기억이됌
 
-  const onCreate = () => {
+  const onCreate = useCallback(() => {
     const newUser = {
       id: nextId.current,
       username,
@@ -56,25 +59,25 @@ function App() {
     };
     // 가능
     // setUsers([...users, newUser]);
-    setUsers(users.concat(newUser));
+    setUsers((users) => users.concat(newUser));
     setInputs({
       username: "",
       email: "",
     });
     nextId.current += 1;
-  };
+  }, [username, email]);
 
-  const onRemove = (userId) => {
-    setUsers(users.filter((user) => user.id !== userId));
-  };
+  const onRemove = useCallback((userId) => {
+    setUsers((users) => users.filter((user) => user.id !== userId));
+  }, []);
 
-  const onToggle = (userId) => {
-    setUsers(
+  const onToggle = useCallback((userId) => {
+    setUsers((users) =>
       users.map((user) =>
         user.id === userId ? { ...user, active: !user.active } : user
       )
     );
-  };
+  }, []);
 
   const count = useMemo(() => countActiveUsers(users), [users]);
 
