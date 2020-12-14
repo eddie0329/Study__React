@@ -1,4 +1,10 @@
-import React, { useRef, useReducer, useMemo, useCallback } from "react";
+import React, {
+  useRef,
+  useReducer,
+  useMemo,
+  useCallback,
+  createContext,
+} from "react";
 import Hello from "./Hello";
 import Wrapper from "./Wrapper";
 import Counter from "./Counter";
@@ -6,6 +12,7 @@ import InputSample from "./InputSample";
 import UserList from "./UserList";
 import CreateUser from "./CreateUser";
 import useInputs from "./useInputs";
+import ContextSample from "./ContextSample";
 
 function countActiveUsers(users) {
   console.log("활성 사용자 수를 세는중...");
@@ -52,12 +59,14 @@ function reducer(state, action) {
     case "REMOVE_USER":
       return {
         ...state,
-        users: state.users.filter((user) => user.id),
+        users: state.users.filter((user) => user.id !== action.id),
       };
     default:
       return state;
   }
 }
+
+export const UserDispatch = createContext(null);
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -82,45 +91,35 @@ function App() {
     reset();
   }, [username, email, reset]);
 
-  const onToggle = useCallback((id) => {
-    dispatch({
-      type: "TOGGLE_USER",
-      id,
-    });
-  }, []);
-
-  const onRemove = useCallback((id) => {
-    dispatch({
-      type: "REMOVE_USER",
-      id,
-    });
-  }, []);
-
   const count = useMemo(() => countActiveUsers(users), [users]);
 
   return (
-    <Wrapper>
-      <Hello name="react" color="red" isSpecial={true} />
-      <Hello name="react" color="pink" isSpecial />
-      <Hello color="blue" isSpecial={false} />
-      <hr />
-      <Counter />
-      <hr />
-      <InputSample />
-      <hr />
-      <h1>CreateUser</h1>
-      <CreateUser
-        username={username}
-        email={email}
-        onChange={onChange}
-        onCreate={onCreate}
-      />
-      <hr />
-      <h1>UserList</h1>
-      <UserList users={users} onToggle={onToggle} onRemove={onRemove} />
-      <div>활성 사용자 수: {count}</div>
-      <hr />
-    </Wrapper>
+    <UserDispatch.Provider value={[state, dispatch]}>
+      <Wrapper>
+        <Hello name="react" color="red" isSpecial={true} />
+        <Hello name="react" color="pink" isSpecial />
+        <Hello color="blue" isSpecial={false} />
+        <hr />
+        <Counter />
+        <hr />
+        <InputSample />
+        <hr />
+        <h1>CreateUser</h1>
+        <CreateUser
+          username={username}
+          email={email}
+          onChange={onChange}
+          onCreate={onCreate}
+        />
+        <hr />
+        <h1>UserList</h1>
+        <UserList users={users} />
+        <div>활성 사용자 수: {count}</div>
+        <hr />
+        <ContextSample />
+        <hr />
+      </Wrapper>
+    </UserDispatch.Provider>
   );
 }
 
