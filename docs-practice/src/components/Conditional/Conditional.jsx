@@ -26,6 +26,11 @@ const Conditional = () => {
       <h3 style={{ color: isThird ? "red" : "black" }}>
         isThird: {`${isThird}`}
       </h3>
+      { 
+        isFirst ? <Child1 /> : 
+        isSecond ? <Child2 /> : 
+        <Child3 /> 
+      }
     </section>
   );
 };

@@ -7,6 +7,7 @@ import ReducerTest from './components/reducer/ReducerTest';
 import ReducerContextProvider from './components/ReducerContextProvider/ReducerContextProvider';
 import Conditional from './components/Conditional/Conditional';
 import InputTest from './components/Input/InputTest';
+import Iteration from './components/Iteration/Iteration';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <ReducerContextProvider />
       <Conditional />
       <InputTest />
+      <Iteration />
     </div>
   );
 }
