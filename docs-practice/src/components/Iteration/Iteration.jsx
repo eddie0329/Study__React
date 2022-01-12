@@ -18,10 +18,16 @@ const Iteration = () => {
   // }, [todos]);
 
   const changeTodoCompleted = (index) => {
-    setTodos(todos.map((todo, _index) => {
-      if (index === _index) todo.completed = !todo.completed;
-      return todo;
-    }));
+    // setTodos(todos.map((todo, _index) => {
+    //   if (index === _index) todo.completed = !todo.completed;
+    //   return todo;
+    // }));
+    setTodos(prevTodos => {
+      return prevTodos.map((todo, _index) => {
+        if (index === _index) return { ...todo, completed: !todo.completed }
+        else return todo;
+      });
+    })
   }
 
   return (
