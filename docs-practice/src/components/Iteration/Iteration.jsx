@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Todo from "./Todo";
 
 const _todos = [
@@ -10,14 +10,29 @@ const _todos = [
 const Iteration = () => {
   const [todos, setTodos] = useState(_todos);
 
+  // const changeTodoCompleted = useCallback((index) => {
+  //   setTodos(todos.map((todo, _index) => {
+  //     if (index === _index) todo.completed = !todo.completed;
+  //     return todo;
+  //   }));
+  // }, [todos]);
+
+  const changeTodoCompleted = (index) => {
+    setTodos(todos.map((todo, _index) => {
+      if (index === _index) todo.completed = !todo.completed;
+      return todo;
+    }));
+  }
+
   return (
     <>
       <section>
         <span>{ JSON.stringify(todos) }</span>
         <h1>Iteration</h1>
-        {todos.map((todo) => (
-          <Todo key={todo.title} todo={todo} setTodos={setTodos} />
+        {todos.map((todo, index) => (
+          <Todo key={index} todo={todo} changeTodoCompleted={() => changeTodoCompleted(index)} />
         ))}
+        <button onClick={() => console.log(todos)}>CLICKME</button>
       </section>
     </>
   );

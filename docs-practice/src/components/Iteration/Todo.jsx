@@ -1,15 +1,11 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 
-const Todo = ({ todo, setTodo }) => {
-
-  const onChange = () => {
-    todo.completed = !todo.completed;
-  }
+const Todo = ({ todo, changeTodoCompleted }) => {
 
   return (
     <article>
       <span><strong>{ todo.title }</strong></span>
-      <input type='checkbox' value={todo.completed} onChange={onChange} />
+      <input type='checkbox' checked={todo.completed} onChange={changeTodoCompleted} />
     </article>
   );
 };

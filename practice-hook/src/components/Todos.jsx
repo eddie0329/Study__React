@@ -1,8 +1,13 @@
-import React, {useContext, useState, useCallback, useMemo} from 'react';
+import React, {useContext, useState, useCallback, useMemo, useRef, useEffect} from 'react';
 import TodoContext from '../context/TodoContext';
 
 function TodoInput({ dispatch }) {
   const [text, setText] = useState('');
+  const inputEl = useRef();
+
+  useEffect(() => {
+    inputEl.current.focus();
+  }, []);
 
   const onChange = useCallback((e) => {
     setText(e.target.value);
@@ -21,7 +26,7 @@ function TodoInput({ dispatch }) {
 
   return (
     <div>
-      <input value={text} onChange={onChange} onKeyPress={onEnter} />
+      <input ref={inputEl} value={text} onChange={onChange} onKeyPress={onEnter} />
       <button onClick={addTodo}>ADD</button>
     </div>
   );
