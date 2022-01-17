@@ -1,33 +1,14 @@
-import React, { useState, useCallback, useMemo, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-const ModalContainer = () => {
-  const [modals, setModals] = useState([]);
-
-  const push = () => {
-    console.log("HELLO WORLD");
-  };
-
-  return (
-    <div>
-      <h1>HELLO WORLD</h1>
-    </div>
-  );
-};
-
-const useModal = (modalComponent) => {
-  const [root, setRoot] = useState();
-  const push = () => {};
-  const pop = () => {}
-
+const useModal = () => {
+  const [modalContainer, setModalContainer] = useState();
   useEffect(() => {
-    if (root) return;
-    const _root = document.querySelector("#root");
-    console.log(ModalContainer);
-    // _root.appendChild(ModalContainer());
-    setRoot(_root);
-  }, [root]);
+    setModalContainer(window._modalContainer);
+  }, []);
 
-  return { push, pop }
+  const push = async (modalComponent, options) => await modalContainer.push(modalComponent, options);
+
+  return { push }
 };
 
 export default useModal;
