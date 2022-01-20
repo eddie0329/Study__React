@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer } from "react";
 
 const initialState = {
   idInput: '',
@@ -20,12 +20,9 @@ const Test1 = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { idInput, passwordInput } = state;
 
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
-
   const onSubmit = (e) => {
     e.preventDefault();
+    console.log({ idInput, passwordInput });
   };
 
   return (
@@ -35,6 +32,9 @@ const Test1 = () => {
         <input value={idInput} onChange={e => dispatch({ type: 'setIdInput', payload: e.target.value })} />
         <div>passwordInput: {passwordInput}</div>
         <input value={passwordInput} onChange={e => dispatch({ type: 'setPasswordInput', payload: e.target.value })} />
+        <div>
+          <button type="submit">SUBMIT</button>
+        </div>
       </form>
     </>
   );
