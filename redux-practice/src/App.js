@@ -3,6 +3,7 @@ import './App.css';
 import { addTodo } from './action';
 import { connect } from 'react-redux';
 import Button from './Button';
+import Test from './Test.jsx';
 
 class App extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class App extends React.Component {
           <p>{JSON.stringify(this.props.todos)}</p>
           <Button add={ this.props.add } />
         </header>
+        <Test />
       </div>
     );
   }
