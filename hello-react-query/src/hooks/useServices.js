@@ -23,7 +23,7 @@ const useServices = () => {
   };
   const instances = new Map();
   const getInstance = (name) => {
-    if (instances.get) instances.set(name, constructor[name]());
+    if (!instances.get(name)) instances.set(name, constructor[name]());
     return instances.get(name);
   };
   return {
