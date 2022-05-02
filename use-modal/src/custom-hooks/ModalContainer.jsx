@@ -34,7 +34,7 @@ class ModalContainer extends React.Component {
   push(modalComponent, options = {}) {
     return new Promise((resolve, reject) => {
       this.setState({ modals: [{ Component: modalComponent, resolve, reject, options, id: this.state.id, }, ...this.state.modals ]})
-      this.setState({ id: this.id + 1 });
+      this.setState({ id: this.state.id + 1 });
     });
   }
 

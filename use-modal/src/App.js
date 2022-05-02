@@ -11,10 +11,12 @@ const test1 = ({ options, resolve, reject }) => {
   };
 
   return (
-    <>
-      <h1>HELLO { title }</h1>
-      <button onClick={onResolve}>resolve</button>
-    </>
+    <div className="modal">
+      <div className="content">
+        <h1>HELLO { title }</h1>
+        <button onClick={onResolve}>resolve</button>
+      </div>
+    </div>
   );
 }
 
