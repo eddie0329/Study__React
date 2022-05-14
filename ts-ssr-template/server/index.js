@@ -3,6 +3,7 @@ import fs from 'fs';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import express from 'express';
+import { StaticRouter } from 'react-router-dom/server';
 import App from '../src/App.tsx';
 
 /** CONSTANTS */
@@ -10,7 +11,7 @@ const PORT = 9000;
 const server = express();
 
 server.get('/', (req, res) => {
-  const app = ReactDOMServer.renderToString(<App />);
+  const app = ReactDOMServer.renderToString(<StaticRouter location={req.url}><App /></StaticRouter>);
   const indexFile = path.resolve('./build/index.html');
 
   fs.readFile(indexFile, 'utf8', (err, data) => {

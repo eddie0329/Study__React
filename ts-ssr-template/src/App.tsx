@@ -1,22 +1,13 @@
 import React from 'react';
+// import AppHeader from './components/AppHeader';
+// import RouteView from './router/RouteView';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>Hi</h1>
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello</h1>
+      {/* <AppHeader /> */}
+      {/* <RouteView /> */}
     </div>
   );
 }
