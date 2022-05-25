@@ -10,6 +10,7 @@ class ModalContainer extends React.Component {
 
   // TODO: Need Install
   componentDidMount() {
+    if (!window) return;
     window._modalContainer = this;
   }
 
@@ -40,7 +41,7 @@ class ModalContainer extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         {
           this.state.modals.map(({Component, id, options}) => 
             <Component 
@@ -51,7 +52,7 @@ class ModalContainer extends React.Component {
               close={() => this.close(id)}
             />)
         }
-      </>
+      </div>
     );
   }
 }
