@@ -1,0 +1,224 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <option name="OTHER_INDENT_OPTIONS">
+      <value>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
+      </value>
+    </option>
+    <option name="RIGHT_MARGIN" value="500" />
+    <CssCodeStyleSettings>
+      <option name="BLANK_LINES_BETWEEN_BLOCKS" value="0" />
+      <option name="BLANK_LINES_AROUND_NESTED_SELECTOR" value="0" />
+      <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
+    </CssCodeStyleSettings>
+    <DB2CodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </DB2CodeStyleSettings>
+    <DerbyCodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </DerbyCodeStyleSettings>
+    <H2CodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </H2CodeStyleSettings>
+    <H2CodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </H2CodeStyleSettings>
+    <HSQLCodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </HSQLCodeStyleSettings>
+    <HTMLCodeStyleSettings>
+      <option name="HTML_ATTRIBUTE_WRAP" value="0" />
+      <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
+      <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="html,body,thead,tbody,tfoot,script,style" />
+    </HTMLCodeStyleSettings>
+    <JSCodeStyleSettings version="0">
+      <option name="FORCE_SEMICOLON_STYLE" value="true" />
+      <option name="USE_DOUBLE_QUOTES" value="false" />
+      <option name="FORCE_QUOTE_STYlE" value="true" />
+      <option name="OBJECT_LITERAL_WRAP" value="0" />
+      <option name="IMPORTS_WRAP" value="0" />
+      <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
+      <option name="SPACES_WITHIN_IMPORTS" value="true" />
+      <option name="USE_CHAINED_CALLS_GROUP_INDENTS" value="true" />
+      <option name="BLANK_LINES_AROUND_FUNCTION" value="0" />
+    </JSCodeStyleSettings>
+    <JetCodeStyleSettings>
+      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+    </JetCodeStyleSettings>
+    <LessCodeStyleSettings>
+      <option name="HEX_COLOR_LOWER_CASE" value="true" />
+      <option name="HEX_COLOR_SHORT_FORMAT" value="true" />
+      <option name="BLANK_LINES_BETWEEN_BLOCKS" value="0" />
+      <option name="BLANK_LINES_AROUND_NESTED_SELECTOR" value="0" />
+      <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
+    </LessCodeStyleSettings>
+    <MSSQLCodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </MSSQLCodeStyleSettings>
+    <MySQLCodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </MySQLCodeStyleSettings>
+    <OracleCodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </OracleCodeStyleSettings>
+    <PostgresCodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </PostgresCodeStyleSettings>
+    <SQLiteCodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </SQLiteCodeStyleSettings>
+    <SqlCodeStyleSettings version="6">
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="INSERT_COLLAPSE_MULTI_ROW_VALUES" value="true" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </SqlCodeStyleSettings>
+    <SybaseCodeStyleSettings version="6">
+      <option name="USE_GENERAL_STYLE" value="false" />
+      <option name="INSERT_EL_WRAP" value="2" />
+      <option name="SET_EL_LINE" value="101" />
+      <option name="SET_EL_WRAP" value="2" />
+    </SybaseCodeStyleSettings>
+    <TypeScriptCodeStyleSettings version="0">
+      <option name="USE_DOUBLE_QUOTES" value="false" />
+      <option name="FORCE_QUOTE_STYlE" value="true" />
+    </TypeScriptCodeStyleSettings>
+    <VueCodeStyleSettings>
+      <option name="UNIFORM_INDENT" value="false" />
+    </VueCodeStyleSettings>
+    <codeStyleSettings language="CSS">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="GraphQL">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="HTML">
+      <option name="RIGHT_MARGIN" value="300" />
+      <option name="WRAP_ON_TYPING" value="0" />
+      <option name="SOFT_MARGINS" value="300" />
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+      <arrangement>
+        <rules>
+          <section>
+            <rule>
+              <match>
+                <XML_ATTRIBUTE />
+              </match>
+            </rule>
+          </section>
+        </rules>
+      </arrangement>
+    </codeStyleSettings>
+    <codeStyleSettings language="JAVA">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="JSP">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="JavaScript">
+      <option name="RIGHT_MARGIN" value="300" />
+      <option name="KEEP_BLANK_LINES_IN_CODE" value="10" />
+      <option name="BLANK_LINES_AFTER_IMPORTS" value="0" />
+      <option name="BLANK_LINES_AROUND_CLASS" value="0" />
+      <option name="BLANK_LINES_AROUND_METHOD" value="0" />
+      <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+      <option name="ALIGN_MULTILINE_FOR" value="false" />
+      <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
+      <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
+      <option name="WRAP_ON_TYPING" value="0" />
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="LESS">
+      <indentOptions>
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="PHP">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="TypeScript">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="XML">
+      <option name="RIGHT_MARGIN" value="1000" />
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="kotlin">
+      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+    </codeStyleSettings>
+  </code_scheme>
+</component>
