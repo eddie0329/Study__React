@@ -37,6 +37,6 @@ export default class Controller {
   update() {
     assert(this.flagState !== undefined, 'FlagState should be defined') /* guard */
     const [_, setFlag] = this.flagState
-    setFlag(prev => prev * 1)
+    setFlag(prev => prev * -1)
   }
 }

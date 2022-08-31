@@ -18,8 +18,8 @@ export default function LoginForm(): ReactElement {
 
   return (
     <form onSubmit={handleSubmit}>
-      <MyInput label="아이디" placeholder="이메일" onChange={(e) => state.id = e.target.value} />
-      <MyInput label="비밀번호" type="password" placeholder="비밀번호" onChange={(e) => state.password = e.target.value} />
+      <MyInput value={state.id} label="아이디" placeholder="이메일" onChange={(e) => state.id = e.target.value} />
+      <MyInput value={state.password} label="비밀번호" type="password" placeholder="비밀번호" onChange={(e) => state.password = e.target.value} />
       <MyButton type="submit">제출</MyButton>
     </form>
   )
