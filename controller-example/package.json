@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start-client": "react-app-rewired start",
-    "start-server": "nodemon --watch 'srv/**/*.ts' --exec 'ts-node' srv/app.ts"
+    "start-server": "nodemon --watch 'srv/**/*.ts' --exec 'ts-node' srv/app.ts -r tsconfig-paths/register -r ts-node/register srv/app.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +48,7 @@
     "@types/styled-components": "^5.1.26",
     "nodemon": "^2.0.19",
     "react-app-rewired": "^2.2.1",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0"
   }
 }

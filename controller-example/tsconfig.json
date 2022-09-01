@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["./*"]
-    },
     "target": "es6",
     "lib": [
       "dom",
