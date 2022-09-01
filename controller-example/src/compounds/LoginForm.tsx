@@ -24,7 +24,7 @@ export default function LoginForm(): ReactElement {
         <MyInput value={state.password} label="비밀번호" type="password" placeholder="비밀번호" onChange={(e) => state.password = e.target.value} />
         <MyButton type="submit">제출</MyButton>
       </form>
-      <h3>실험 내용:</h3>
+      <h3>📌 실험 내용:</h3>
       <p>state의 주소 값 변경 및 접근으로 제대로 rendering이 되는지 확인</p>
       <hr />
     </div>
