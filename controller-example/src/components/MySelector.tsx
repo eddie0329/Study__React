@@ -1,9 +1,6 @@
-import React, { ReactElement, SelectHTMLAttributes } from 'react'
-
-
+import React, {ReactElement} from 'react'
 
 export default function MySelector(): ReactElement {
-
   return (
     <select>
       <option>사과</option>

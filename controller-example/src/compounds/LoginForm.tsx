@@ -1,7 +1,7 @@
 import React, {ReactElement, FormEvent} from 'react'
-import MyInput from '../components/MyInput';
-import MyButton from '../components/MyButton';
-import {useController} from '../hooks/useController';
+import MyInput from '@/src/components/MyInput';
+import MyButton from '@/src/components/MyButton';
+import {useController} from '@/src/hooks/useController';
 
 interface LoginState {
   id: string
