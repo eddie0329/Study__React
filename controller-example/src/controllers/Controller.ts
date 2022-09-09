@@ -7,8 +7,13 @@ export default class Controller {
   private flagState?: FlagState
   private state?: any
 
-  constructor(initialState: any) {
-    this.state = new Proxy(initialState, {
+  /* state management */
+  getState() {
+    return this.state
+  }
+
+  setState(newState: any) {
+    this.state = new Proxy(newState, {
       get: (target: any, name: string) => {
         return target[name]
       },
@@ -18,17 +23,15 @@ export default class Controller {
         return true
       }
     })
-  }
-
-  /* state management */
-  getState() {return this.state}
-  setState(newState: any) {
-    this.state = newState
+    this.update()
     return this
   }
 
   /* flag management */
-  getFlagState() {return this.flagState}
+  getFlagState() {
+    return this.flagState
+  }
+
   setFlagState(newFlagState: FlagState) {
     this.flagState = newFlagState
     return this;

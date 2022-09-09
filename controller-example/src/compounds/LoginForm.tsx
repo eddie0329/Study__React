@@ -1,7 +1,7 @@
 import React, {ReactElement, FormEvent} from 'react'
 import MyInput from '../components/MyInput';
 import MyButton from '../components/MyButton';
-import {useController} from '../hooks/useController';
+import {useBasicController} from '../hooks/useController';
 
 interface LoginState {
   id: string
@@ -9,7 +9,7 @@ interface LoginState {
 }
 
 export default function LoginForm(): ReactElement {
-  const {state} = useController<LoginState>({id: '', password: ''})
+  const {state} = useBasicController<LoginState>({id: '', password: ''})
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()

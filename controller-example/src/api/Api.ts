@@ -1,15 +1,22 @@
-import axios, {AxiosInstance} from 'axios'
-import assert from 'assert'
+import axios, {AxiosInstance, AxiosResponse} from 'axios'
 
-class Api {
-  private readonly axiosInstance?: AxiosInstance
+export default class Api {
+  private readonly axiosInstance: AxiosInstance
 
   constructor(path: string) {
     this.axiosInstance = axios.create({baseURL: path})
+    this.axiosInstance.interceptors.response.use((res: AxiosResponse) => res?.data)
   }
 
-  get(path: string, params: any): Promise<any> {
-    assert(this.axiosInstance !== undefined)
+  get(path: string, params?: any): Promise<any> {
     return this.axiosInstance.get(path, params)
+  }
+
+  post(path: string, data?: any): Promise<any> {
+    return this.axiosInstance.post(path, data)
+  }
+
+  delete(path: string, data?: any): Promise<any> {
+    return this.axiosInstance.delete(path, data)
   }
 }
