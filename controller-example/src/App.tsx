@@ -1,18 +1,13 @@
 import React from 'react';
 import {Outlet} from 'react-router-dom'
+import routes from './routes';
 import NavItem from './components/NavItem';
 
 function App() {
-  const navs = [
-    {to: '/', name: 'Home'},
-    {to: '/form', name: 'Form'},
-    {to: '/todos', name: 'Todos'},
-  ]
-
   return (
     <div className="App">
       <nav>
-        {navs.map(nav => <NavItem key={nav.name} {...nav} />)}
+        {routes.map(routeInfo => <NavItem key={routeInfo.name} to={routeInfo.path} name={routeInfo.name} />)}
       </nav>
       <Outlet />
     </div>

@@ -26,7 +26,7 @@ export const usePromiseController = <T>(promiseFunc: () => Promise<T>) => {
 
 export const useBasicController = <T>(initialState: T) => {
   const flagState = useState<number>(1)
-  const [controller] = useState<Controller>(new Controller().setState(initialState).setFlagState(flagState))
+  const [controller] = useState<Controller>(new Controller().setFlagState(flagState).setState(initialState))
   return {
     state: controller.getState() as T,
   }

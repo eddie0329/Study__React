@@ -23,7 +23,6 @@ export default class Controller {
         return true
       }
     })
-    this.update()
     return this
   }
 
