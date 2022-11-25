@@ -1,24 +1,20 @@
-import React, {
-	PropsWithChildren,
-	useEffect,
-	useLayoutEffect,
-	useState,
-} from 'react';
+import React, { PropsWithChildren, useState } from 'react';
 import { ModalContext } from './ModalContext';
 import ModalContainer from './ModalContainer';
 import ModalProxy from './ModalProxy';
 import { useMount } from '../../hooks';
+import { useRouter } from 'next/router';
 
 export default function ModalProvider({ children }: PropsWithChildren) {
+	const router = useRouter();
 	const flagState = useState(1);
-	const [modalProxy] = useState(() => new ModalProxy(flagState));
-	const [mount] = useMount();
+	const [modalProxy] = useState(() => new ModalProxy(flagState, router));
+	const { useMountEffect } = useMount();
 
-	useLayoutEffect(() => {
-		if (!mount) return; /* guard */
+	useMountEffect(() => {
 		modalProxy.mount();
 		return modalProxy.unmount();
-	}, [mount]);
+	});
 
 	return (
 		<ModalContext.Provider value={modalProxy}>

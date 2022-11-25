@@ -7,5 +7,11 @@ export const useMount = () => {
 		setMount(true);
 	}, []);
 
-	return [mount];
+	const useMountEffect = (callback: any) =>
+		useEffect(() => {
+			if (!mount) return; /* guard */
+			return callback();
+		}, [mount]);
+
+	return { mount, useMountEffect };
 };

@@ -1,3 +1,4 @@
+import { NextRouter } from 'next/router';
 import React, { FC } from 'react';
 
 export type Resolve = (value: unknown) => void;
@@ -17,10 +18,12 @@ interface ModalInfo {
 
 export default class ModalProxy {
 	private readonly flagState: FlagState;
+	private readonly router: NextRouter;
 	modalInfos: ModalInfo[] = [];
 
-	constructor(flagState: FlagState) {
+	constructor(flagState: FlagState, router: NextRouter) {
 		this.flagState = flagState;
+		this.router = router;
 	}
 
 	filterModalInfoByKey(key: string) {
@@ -53,6 +56,11 @@ export default class ModalProxy {
 				reject: (reason) => this.reject(key, reason, reject),
 				props: options?.props ?? {},
 			});
+			// this.router.push({
+			// 	query: {
+			// 		dialogType: this.modalInfos.map(({ key }) => key),
+			// 	},
+			// });
 			this.update();
 		});
 	}
